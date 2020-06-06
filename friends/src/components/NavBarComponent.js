@@ -1,17 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import {
-    Collapse,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
 } from 'reactstrap';
 
 const NavBarComponent = () => {
@@ -23,12 +17,16 @@ const NavBarComponent = () => {
             <Nav className="mr-auto" navbar>
                 <NavItem>
                     <NavLink to="/login">
-                        Login
+                        <Link to="/login">
+                            Login
+                        </Link>
                     </NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink to="/protected">
-                        Friends
+                        <Link to="/protected">
+                            Friends
+                        </Link>
                     </NavLink>
                 </NavItem>
             </Nav>

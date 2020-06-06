@@ -13,7 +13,7 @@ class Friends extends React.Component {
 
     getData = () => {
         axiosWithAuth()
-            .get("/data")
+            .get("/friends")
             .then(res => {
                 console.log(res)
             })
@@ -24,7 +24,9 @@ class Friends extends React.Component {
 
     render() {
         return (
-
+            <div></div>
         )
     }
 }
+
+export default Friends;
