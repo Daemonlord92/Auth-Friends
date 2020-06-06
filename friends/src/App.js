@@ -1,13 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import logo from './logo.svg';
-import './App.css';
-
+import NavBarComponent from "./components/NavBarComponent";
+import Login from "./components/Login";
+import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
-    <div className="container">
-    
-    </div>
+      <Router>
+        <div className="container">
+            <NavBarComponent/>
+        </div>
+      </Router>
   );
 }
 
