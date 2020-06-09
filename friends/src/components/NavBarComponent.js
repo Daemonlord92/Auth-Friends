@@ -16,18 +16,14 @@ const NavBarComponent = () => {
             </NavbarBrand>
             <Nav className="mr-auto" navbar>
                 <NavItem>
-                    <NavLink to="/login">
-                        <Link to="/login">
+                        <Link to="/login" className="nav-link">
                             Login
                         </Link>
-                    </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/protected">
-                        <Link to="/protected">
+                        <Link to="/protected" className="nav-link">
                             Friends
                         </Link>
-                    </NavLink>
                 </NavItem>
             </Nav>
         </Navbar>
