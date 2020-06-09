@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-    Card, Button, Form, FormGroup, Label, Input, FormText
+    Card, Button, Form, FormGroup, Label, Input
 } from 'reactstrap';
 
 const FriendForm = (props) => {
@@ -11,7 +11,7 @@ const FriendForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        props.addFriend(newFriend);
+        props.this.addFriend(newFriend);
         setNewFriend({
             name: '',
             email: ''
