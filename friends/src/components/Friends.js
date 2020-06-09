@@ -1,5 +1,6 @@
 import React from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
+import FriendForm from './FriendForm';
 
 
 class Friends extends React.Component {
@@ -26,6 +27,15 @@ class Friends extends React.Component {
             )
     }
 
+    addFriend = newFriend => {
+        axiosWithAuth()
+            .post("/friends", newFriend)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => console.log(err))
+    };
+
     render() {
         return (
             <div>
@@ -39,6 +49,7 @@ class Friends extends React.Component {
                         )
                     })
                 }
+                <FriendForm addFriend={this.state.friends.addFriend} />
             </div>
         )
     }
